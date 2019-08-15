@@ -7,10 +7,11 @@ import {
 
 class NinePatchView extends Component {
   render() {
-    const { source, children, rest} = this.props
+    const { source, children, capInsets, ...rest} = this.props
     return (
       <View {...rest}>
         <Image
+          capInsets={capInsets}
           source={source}
           style={styles.capInset}
           resizeMode='stretch'
